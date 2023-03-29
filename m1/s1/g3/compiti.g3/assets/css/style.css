@@ -1,4 +1,6 @@
-img {max-width: 100%;}
+img {
+    max-width: 100%;
+}
 
 #main-logo {
     width: 190px
@@ -25,7 +27,9 @@ img {max-width: 100%;}
     margin: 0 auto;
 }
 
-figcaption {color: gray;}
+figcaption {
+    color: gray;
+}
 
 .featured {
     border-left: 2px solid #fec83e;
