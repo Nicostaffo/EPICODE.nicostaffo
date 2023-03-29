@@ -1,0 +1,21 @@
+.container {
+    width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.textbox {
+    color: mediumseagreen;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    border-top: 5px gold;  
+}
+
+.center {text-align: center;}
+
+
+.p{color: lightgrey;}
+
+
+.separazione {color: mediumseagreen}
+
