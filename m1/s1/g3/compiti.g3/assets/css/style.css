@@ -1,21 +1,33 @@
-.container {
-    width: 700px;
+img {max-width: 100%;}
+
+#main-logo {
+    width: 190px
+}
+
+#sec-img {
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px 2px rgb(216, 212, 212);
+}
+
+.centered {
+    text-align: center;
+}
+
+.central-block {
+    color: #01494d;
+    background-color: #fdfbf1;
+    padding: 5px;
+    border-top: 1px solid #ffd672;
+}
+
+.container{
+    width: 600px;
     margin: 0 auto;
-    text-align: center;
 }
 
-.textbox {
-    color: mediumseagreen;
-    background-color: lightgoldenrodyellow;
-    text-align: center;
-    border-top: 5px gold;  
+figcaption {color: gray;}
+
+.featured {
+    border-left: 2px solid #fec83e;
+    padding-left: 20px;
 }
-
-.center {text-align: center;}
-
-
-.p{color: lightgrey;}
-
-
-.separazione {color: mediumseagreen}
-
