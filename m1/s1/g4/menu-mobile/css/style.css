@@ -1,0 +1,15 @@
+/* selezione per attributo, peso tag piu attributo 1+10
+[type="checkbox"]{
+    width: 100px;
+    height: 100px;
+}*/
+
+#check {
+    width: 100px;
+    height: 100px;
+}
+
+#check:checked {
+    width: 100px;
+    height: 100px;
+}
