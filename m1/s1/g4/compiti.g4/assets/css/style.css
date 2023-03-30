@@ -75,7 +75,11 @@ p a {
   text-decoration: underline;
 
 }
-
+aside a {
+    color: #00a0cc;
+    text-decoration: underline;
+  
+  }
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 ul {
@@ -143,7 +147,31 @@ input {
 } 
 
 .fourth-container {
-    background-color:#dde6e7;
+    background-color:#ddddde;
+    padding: 20px;
+}
+
+aside {
+    color: black;
+}
+
+.fourth-container p {
+    margin-top: 5px;
+}
+
+.data {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+footer{
+    background-color: #01546b;
+    padding: 20px;
+    color: #fff;
+}
+
+#last-link {
+    color: #f216d6;
 }
 /* ELEMENTI NELL' ASIDE */
 
