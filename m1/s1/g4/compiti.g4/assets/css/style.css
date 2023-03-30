@@ -2,13 +2,20 @@
 :root{
     font-family: Poppins, sans-serif;
 }
+.margin{
+    margin-bottom: 20px;
+}
 h1 {
     font-size: 25px; 
-    margin-bottom: 20px;  
 }
 
 h2 {
     font-size: 35px;
+    
+}
+
+h4{
+    color: rgb(174, 174, 174);
 }
 
 body {
