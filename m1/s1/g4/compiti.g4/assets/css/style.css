@@ -23,9 +23,9 @@ body {
     margin: 20px;
 }
 .centered-second{
-    
+    padding: 20px;
     background-color: #fff;
-   
+    margin: 20px;
 }
 
 .main-block {
@@ -39,12 +39,18 @@ img {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+#hide-balls{
+    list-style: none;
+}
 
 /* MAIN */
 
-#nav {
+a {
     color: #fff;
+    font-size: 18px;
 }
+
+
 
 
 /* ELEMENTI NEL MAIN - ARTICLE */
