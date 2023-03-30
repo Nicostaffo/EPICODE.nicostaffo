@@ -21,6 +21,11 @@ h4{
     color: rgb(174, 174, 174);
 }
 
+h5{
+    color: black;
+
+}
+
 body {
     background-image: url(../img/sfondo.png);
 }
@@ -33,7 +38,10 @@ body {
     margin: 20px;
 }
 .centered-second{
-    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     background-color: #fff;
     margin: 20px;
 }
@@ -64,7 +72,16 @@ a {
 
 
 /* ELEMENTI NEL MAIN - ARTICLE */
+ul {
+    padding-left: 20px;
+}
 
+ol {
+    padding-left: 20px;
+}
+span{
+    color: fuchsia;
+}
 /* TABELLE */
 
 /* FORM */
