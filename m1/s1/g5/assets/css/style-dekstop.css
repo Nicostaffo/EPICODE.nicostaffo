@@ -65,8 +65,8 @@ button a {
 
 }
 
-section.display-in {
-    display: inline;
+.display-in {
+    display: flex;
 }
 
 img{
