@@ -18,6 +18,9 @@ h1, h3{
     padding-bottom: 20px;
     padding-left: 40px;
 }
+#logo img{ width: 120px;
+
+}
 
 button {
     background-color: #f04c2f;
@@ -58,7 +61,6 @@ button a {
 
 #background  {
     background-image: url("../images/banner.jpg");
-    background-size:;
     background-repeat: no-repeat;
     margin-bottom: 30px;
     padding: 300px;
@@ -69,12 +71,10 @@ button a {
     display: flex;
 }
 
-img{
-    width: 100px;
-}
+
 #pc{
-    border-radius: 100px;
-    width: 220px;
+    border-radius:calc(100%);
+
 }
 
 #testimoniance{
