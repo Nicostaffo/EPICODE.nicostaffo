@@ -1,0 +1,123 @@
+h1, h2, h3, h4 {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #25a2c3;
+}
+h1, h3{
+    font-size: 1.75rem;
+}
+
+
+
+#logo{
+    text-align: center;
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+button {
+    background-color: #f04c2f;
+    border-radius: 3px;
+    height: 35px;
+    margin-top: 25px;
+    font-weight: bold;
+    padding: 10px 25px 10px 25px;
+    border: none;
+   
+}
+
+.bodyfont{
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+    line-height: 1.65;
+    color: #393d41;
+}
+
+.le-ri-pad{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.centered {
+    text-align: center;
+   
+}
+.marginbot{
+    margin-bottom: 20px;
+}
+.titlemargin {
+    margin-bottom: 15px;
+}
+
+#background  {
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    padding: 30px;
+
+}
+
+img{
+    width: 100px;
+}
+#pc{
+    border-radius: 100px;
+    width: 220px;
+}
+
+#testimoniance{
+    background-color: #e22d0e;
+    padding-top: 35px;
+    padding-bottom: 20px;
+}
+h3{
+    font-family: 'Montserrat';
+    font-weight: bold;
+    line-height: 1.5;
+    color: white;
+}
+
+.white {
+    color: white;
+}
+
+
+#notebook {
+    width: 100%;
+   
+}
+
+#italic {
+    font-style: italic;
+    font-size: 16px;
+}
+
+.centered-second {
+    margin-top: 30px ;
+    margin-right:15px ;
+    margin-left: 15px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #dee1e3;
+}
+
+
+
+footer{
+    background-color: #25a2c3;
+    
+
+}
+
+.marginsection {
+    margin-bottom: 40px;
+}
+
+.fot-container {
+    text-align: center;
+    padding: 60px;
+}
