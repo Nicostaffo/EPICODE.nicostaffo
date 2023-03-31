@@ -28,6 +28,9 @@ button {
     border: none;
    
 }
+button a {
+    text-decoration: none;
+}
 
 .bodyfont{
     font-family: 'Open Sans';
