@@ -8,11 +8,42 @@
     <title>Document</title>
 </head>
 <body>
-   
-<button id="switch-on">Accendila</button>
-    <img src="assets/img/light-bulb-part-2-svgrepo-com (1).svg" alt="luce">
+    <img
+      id="myImage"
+      src="assets/img/light-bulb-off.svg"
+      onclick="changeImage()"
+      width="100"
+      height="100"
+    />
+
+    <p>Click the bulb to turn on/off the light</p>
+
+    <button id="bulbOn" onclick="bulbOn()">Accendi</button>
+    <button id="bulbOff" onclick="bulbOff()">Spegni</button>
+
+    <script>
+      function changeImage() {
+        var image = document.getElementById("myImage");
+        if (image.src.match("bulb-on")) {
+          image.src = "assets/img/light-bulb-off.svg";
+        } else {
+          image.src = "assets/img/light-bulb-on.svg";
+        }
+      }
+
+      function bulbOn() {
+        document.getElementById("myImage").src = "assets/img/light-bulb-on.svg";
+      }
+      function bulbOff() {
+        document.getElementById("myImage").src =
+          "assets/img/light-bulb-off.svg";
+      }
+    </script>
+
+
+
      
-    <script src="assets/js/index.js"></script>
-    <script src="assets/js/naming.js"></script>
+    <!-- <script src="assets/js/index.js"></script>
+    <script src="assets/js/naming.js"></script> -->
 </body>
 </html>
