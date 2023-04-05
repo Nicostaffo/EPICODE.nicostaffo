@@ -193,22 +193,22 @@ if(numb9 % 2 == 0){
 } else {
 
   console.log("il numero è dispari")
-  
+
 }
 }
 /* ESERCIZIO 10
-  Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
-  let val = 7
-  if (val < 10) {
+  Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.*/
+  
+
+/* SCRIVI QUI LA TUA RISPOSTA */
+let val = 7
+  if (val >= 5 && val < 10) {
       console.log("Meno di 10");
     } else if (val < 5) {
       console.log("Meno di 5");
     } else {
       console.log("Uguale a 10 o maggiore");
     }
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
@@ -221,7 +221,8 @@ const me = {
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+ me.city
+ console.log(me)
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
