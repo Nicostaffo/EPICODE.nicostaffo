@@ -126,13 +126,12 @@ console.log(characters);
 
 let femaleCharacters = [];
 
-femaleCharacters.push({
-  name: "Leia Organa",
-  hair_color: "brown",
-  eye_color: "brown"
-});
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender == "female") {
+    femaleCharacters.push({ name: starWarsCharacters[i].name, hair_color: starWarsCharacters[i].hair_color, eye_color: starWarsCharacters[i].eye_color });
+  }
+}
 console.log(femaleCharacters);
-
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
   ognuna di queste proprietà contiene un array vuoto
@@ -207,12 +206,18 @@ switch (true) {
     break;
   default:
     break;
-    console.log(starWarsCharacters);
+
 }
 
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
+for (i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === "n/a") {
+    starWarsCharacters[i].gender = "robot";
+  }
+}
+console.log(starWarsCharacters);
 
 /* EXTRA ESERCIZIO 9
 
