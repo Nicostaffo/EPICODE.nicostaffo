@@ -1,0 +1,190 @@
+.logoIntestazione {
+    width: 100px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 15px;
+}
+
+header {
+    background-color: #222f3e;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    background-color: #e9edee;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+body header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.90rem;
+    padding-left: 7px;
+}
+
+nav {
+    background-color: #364759;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+
+}
+
+#orangeBar {
+    background-color: #f66500;
+    text-align: center;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 3px;
+
+}
+
+.margin {
+    margin-top: 35px;
+}
+
+h1 {
+    font-size: 1.7rem
+}
+
+h2 {
+    font-size: 0.90rem;
+    color: white;
+}
+
+h4 {
+    font-weight: bold;
+}
+
+#imgVerde {
+    background-image: url(../img/bg-image.png);
+    text-align: center;
+
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+#sottoTitolo {
+    margin-top: 14px;
+    font-size: 0.8rem;
+}
+
+
+
+
+#imgUno {
+    background-image: url(../img/img_1.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 350px;
+    border-radius: 13px;
+    box-shadow: 0 10px 10px 0 gainsboro;
+}
+
+#imgDue {
+    background-image: url(../img/img_2.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 350px;
+    border-radius: 13px;
+    box-shadow: 0 10px 10px 0 gainsboro;
+}
+
+#imgTre {
+    background-image: url(../img/img_3.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 350px;
+    border-radius: 13px;
+    box-shadow: 0 10px 10px 0 gainsboro;
+}
+
+#imgQuattro {
+    background-image: url(../img/img_4.jpg);
+    background-size: cover;
+    height: 400px;
+    width: 350px;
+    border-radius: 13px;
+    box-shadow: 0 10px 10px 0 gainsboro;
+}
+
+.containerImg {
+    display: flex;
+    justify-content: space-between;
+}
+
+#backContainer {
+    background-color: white;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+#imgCinque {
+    background-image: url(../img/img_9.png);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+
+.allineamento {
+    display: flex;
+}
+
+.allineamentoDue {
+    display: flex;
+    justify-content: center;
+}
+
+.marginTitolo {
+    margin-left: 5px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: #1a6073;
+}
+
+#primaSec {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.imgSei {
+    background-image: url(../img/img_10.png);
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+
+}
+
+footer {
+    background-color: #222f3e;
+    text-align: center;
+}
+
+.preFoot {
+    background-color: #364759;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 35px;
+
+}
+
+.logoFooter {
+    width: 190px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+
+
+}
+
+.return {
+    color: white;
+
+}
