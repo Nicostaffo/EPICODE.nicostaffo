@@ -1,8 +1,6 @@
 .logoIntestazione {
     width: 100px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 15px;
+    padding: 5px 28px 5px 28px;
 }
 
 header {
@@ -28,10 +26,13 @@ body header nav a {
 
 nav {
     background-color: #364759;
-    padding-bottom: 5px;
-    padding-top: 5px;
     margin-bottom: 20px;
+    padding: 5px 28px 5px 28px;
 
+}
+
+nav a:hover {
+    border: 1px solid white;
 }
 
 #orangeBar {
