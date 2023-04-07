@@ -137,7 +137,7 @@ console.log(femaleCharacters);
   ognuna di queste proprietà contiene un array vuoto
 */
 
-let eyeColor = { blue: [], yellow: [], brown: [], red: [], blueGray: [] };
+let eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
 
 /* ESERCIZIO 5
   Inserisci l'oggetto dei personaggi in "starWarsCharacters" nell'array corrispondente al colore dei loro occhi nell'oggetto "eyeColor" precedentemente creato
@@ -155,9 +155,10 @@ for (let y = 0; y < starWarsCharacters.length; y++) {
       break;
     case "red": eyeColor.red.push(starWarsCharacters[y]);
       break;
-    case "blueGray": eyeColor.blueGray.push(starWarsCharacters[y]);
+    case "blue-gray": eyeColor["blue-gray"].push(starWarsCharacters[y]);
       break;
-
+    default:
+      break;
   }
 
 }
