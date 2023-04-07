@@ -15,8 +15,8 @@ body {
 }
 
 main {
-    margin-left: 20px;
-    margin-right: 20px;
+    padding-left: 28px;
+    padding-right: 28px;
 }
 
 body header nav a {
@@ -81,36 +81,40 @@ h4 {
 #imgUno {
     background-image: url(../img/img_1.jpg);
     background-size: cover;
-    height: 400px;
-    width: 350px;
-    border-radius: 13px;
+    background-position: center;
+    height: 450px;
+    width: 360px;
+    border-radius: 20px;
     box-shadow: 0 10px 10px 0 gainsboro;
 }
 
 #imgDue {
     background-image: url(../img/img_2.jpg);
     background-size: cover;
-    height: 400px;
-    width: 350px;
-    border-radius: 13px;
+    background-position: center;
+    height: 450px;
+    width: 360px;
+    border-radius: 20px;
     box-shadow: 0 10px 10px 0 gainsboro;
 }
 
 #imgTre {
     background-image: url(../img/img_3.jpg);
     background-size: cover;
-    height: 400px;
-    width: 350px;
-    border-radius: 13px;
+    background-position: center;
+    height: 450px;
+    width: 360px;
+    border-radius: 20px;
     box-shadow: 0 10px 10px 0 gainsboro;
 }
 
 #imgQuattro {
     background-image: url(../img/img_4.jpg);
     background-size: cover;
-    height: 400px;
-    width: 350px;
-    border-radius: 13px;
+    background-position: center;
+    height: 450px;
+    width: 360px;
+    border-radius: 20px;
     box-shadow: 0 10px 10px 0 gainsboro;
 }
 
