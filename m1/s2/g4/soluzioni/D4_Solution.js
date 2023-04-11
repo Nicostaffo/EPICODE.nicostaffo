@@ -105,7 +105,7 @@ const starWarsCharacters = [
 Crea una variabile chiamata "characters" e inserisci un array vuoto
 */
 
-let characters = [];
+const characters = [];
 
 /* ESERCIZIO 2
 Usando un for loop, cicla l'array "starWarsCharacters" ed accedi alla proprietà "name". 
@@ -114,9 +114,11 @@ Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO",
 */
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  characters.push(starWarsCharacters[i].name);
+  const character = starWarsCharacters[i];
 
+  characters.push(character.name);
 }
+
 console.log(characters);
 
 /* ESERCIZIO 3
@@ -124,24 +126,28 @@ console.log(characters);
   {name: Leia Organa, hair_color: "brown", eye_color: "brown"}
 */
 
-let femaleCharacters = [];
+const femaleCharacters = [];
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender === "female") {
-    femaleCharacters.push({
-      name: starWarsCharacters[i].name,
-      hair_color: starWarsCharacters[i].hair_color,
-      eye_color: starWarsCharacters[i].eye_color
-    });
+  const character = starWarsCharacters[i];
+
+  if (character.gender === "female") {
+    const characterObj = {
+      name: character.name,
+      hair_color: character.hair_color,
+      eye_color: character.eye_color
+    };
+    femaleCharacters.push(characterObj);
   }
 }
+
 console.log(femaleCharacters);
+
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
   ognuna di queste proprietà contiene un array vuoto
 */
-
-let eyeColor = {
+const eyeColor = {
   blue: [],
   yellow: [],
   brown: [],
@@ -154,36 +160,43 @@ let eyeColor = {
   Utilizza uno switch statement per determinare in quale proprietà inserire il personaggio
   */
 
-for (let y = 0; y < starWarsCharacters.length; y++) {
-  // let coloriOcchi = starWarsCharacters[y].eye_color;
-  switch (starWarsCharacters[y].eye_color) {
-    case "blue": eyeColor.blue.push(starWarsCharacters[y]);
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const character = starWarsCharacters[i];
+
+  switch (character.eye_color) {
+    case "blue":
+      eyeColor.blue.push(character);
       break;
-    case "yellow": eyeColor.yellow.push(starWarsCharacters[y]);
+    case "yellow":
+      eyeColor.yellow.push(character);
       break;
-    case "brown": eyeColor.brown.push(starWarsCharacters[y]);
+    case "brown":
+      eyeColor.brown.push(character);
       break;
-    case "red": eyeColor.red.push(starWarsCharacters[y]);
+    case "red":
+      eyeColor.red.push(character);
       break;
-    case "blue-gray": eyeColor["blue-gray"].push(starWarsCharacters[y]);
-      break;
-    default:
+    case "blue-gray":
+      eyeColor["blue-gray"].push(character);
       break;
   }
-
 }
 console.log(eyeColor);
+
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio
   */
-let massaTotale = 0;
-let h = 0;
-while (h < starWarsCharacters.length) {
-  massaTotale += parseInt(starWarsCharacters[h].mass);
-  h++;
-}
-console.log(massaTotale);
 
+let index = 0;
+let crewMass = 0;
+
+while (index < starWarsCharacters.length) {
+  const character = starWarsCharacters[index];
+  crewMass = crewMass + parseInt(character.mass);
+  index++;
+}
+
+console.log(crewMass);
 
 /* ESERCIZIO 7
 
@@ -200,34 +213,37 @@ Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se
 */
 
 switch (true) {
-  case massaTotale < 500:
-    console.log("ship is under loaded");
+  case crewMass < 500:
+    console.log("Ship is under loaded");
     break;
-  case massaTotale == 500:
-    console.log("ship is half loaded");
+  case crewMass === 500:
+    console.log("Ship is half loaded");
     break;
-  case massaTotale > 700 && massaTotale < 900:
-    console.log("warning: load is over 700");
+  case crewMass > 700 && crewMass < 900:
+    console.log("Warning: Load is over 700");
     break;
-  case massaTotale > 900 && massaTotale < 1000:
-    console.log(" critical load: over 900");
+  case crewMass > 900 && crewMass < 1000:
+    console.log("Critical Load: Over 900");
     break;
-  case massaTotale > 1000:
-    console.log(" DANGER! OVERLOAD ALERT: Jump ship now!");
+  case crewMass > 1000:
+    console.log("DANGER! OVERLOAD ALERT: Jump ship now!");
     break;
   default:
-    break;
-
+    console.log("No data provided");
 }
 
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 */
-for (i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender === "n/a") {
-    starWarsCharacters[i].gender = "robot";
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const character = starWarsCharacters[i];
+
+  if (character.gender === "n/a") {
+    character.gender = "robot";
   }
 }
+
 console.log(starWarsCharacters);
 
 /* EXTRA ESERCIZIO 9
@@ -239,30 +255,42 @@ Usa uno più for loop per raggiungere il risultato
 
 Una volta fatto crea un conosle.log per controllare la proprietà length di "characters" prima e dopo l'operazione
 */
+console.log("CHARACTERS BEFORE", characters.length);
 
-for (i = 0; i < femaleCharacters.length; i++) {
-  characters.splice(characters.indexOf(femaleCharacters[i].name), 1);
+for (let i = 0; i < characters.length; i++) {
+  const character = characters[i];
+
+  for (let j = 0; j < femaleCharacters.length; j++) {
+    const femCharacter = femaleCharacters[j];
+
+    if (femCharacter.name === character) {
+      console.log("FEMALE", character);
+      characters.splice(i, 1);
+    }
+  }
 }
-console.log(characters);
+
+console.log("CHARACTERS AFTER", characters.length);
 
 /* EXTRA ESERCIZIO 10
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
 */
 
-let randomChar = starWarsCharacters[(Math.floor(Math.random() * starWarsCharacters.length))]
+const randomIndex = Math.floor(Math.random() * starWarsCharacters.length);
+const selectedCharacter = starWarsCharacters[randomIndex];
 
-console.log("The found character name is:", randomChar.name);
+console.log("The found character name is:", selectedCharacter.name);
 
-if (randomChar.gender === "female") {
-  console.log("She is", randomChar.height, "cm tall");
+if (selectedCharacter.gender === "female") {
+  console.log("She is", selectedCharacter.height, "cm tall");
 } else {
-  console.log("He is", randomChar.height, "cm tall");
+  console.log("He is", selectedCharacter.height, "cm tall");
 }
 
-if (randomChar.hair_color !== "n/a" && randomChar.hair_color !== "none") {
-  console.log("and has", randomChar.hair_color, "hair,");
+if (selectedCharacter.hair_color !== "n/a" && selectedCharacter.hair_color !== "none") {
+  console.log("and has", selectedCharacter.hair_color, "hair,");
 } else {
   console.log("and bald,");
 }
 
-console.log("with", randomChar.skin_color, "skin.");
+console.log("with", selectedCharacter.skin_color, "skin.");
