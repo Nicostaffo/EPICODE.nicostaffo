@@ -134,7 +134,7 @@ REGOLE
 {
     function upperFirst(parole) {
         let arr = parole.split(" ")
-        for (let x = 0; x < arr.lenght; x++) {
+        for (let x = 0; x < arr.length; x++) {
             arr[x] = arr[x][0].toUpperCase() + arr[x].slice(1)
         }
         return arr.join(" ")
@@ -145,7 +145,7 @@ REGOLE
 // {
 //     function upperFirst(gino) {
 //         let z = gino.split(" ");
-//         for (let i = 0; i < z.lenght; i++) {
+//         for (let i = 0; i < z.length; i++) {
 //             z[i] = z[i][0].toUpperCase() + z[i].slice(1)
 //         }
 //         return z.join(" ")
