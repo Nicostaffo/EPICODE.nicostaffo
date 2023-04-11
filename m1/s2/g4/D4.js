@@ -127,8 +127,12 @@ console.log(characters);
 let femaleCharacters = [];
 
 for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender == "female") {
-    femaleCharacters.push({ name: starWarsCharacters[i].name, hair_color: starWarsCharacters[i].hair_color, eye_color: starWarsCharacters[i].eye_color });
+  if (starWarsCharacters[i].gender === "female") {
+    femaleCharacters.push({
+      name: starWarsCharacters[i].name,
+      hair_color: starWarsCharacters[i].hair_color,
+      eye_color: starWarsCharacters[i].eye_color
+    });
   }
 }
 console.log(femaleCharacters);
@@ -137,7 +141,13 @@ console.log(femaleCharacters);
   ognuna di queste proprietà contiene un array vuoto
 */
 
-let eyeColor = { blue: [], yellow: [], brown: [], red: [], "blue-gray": [] };
+let eyeColor = {
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  ["blue-gray"]: []
+};
 
 /* ESERCIZIO 5
   Inserisci l'oggetto dei personaggi in "starWarsCharacters" nell'array corrispondente al colore dei loro occhi nell'oggetto "eyeColor" precedentemente creato
@@ -196,10 +206,10 @@ switch (true) {
   case massaTotale == 500:
     console.log("ship is half loaded");
     break;
-  case massaTotale > 700:
+  case massaTotale > 700 && massaTotale < 900:
     console.log("warning: load is over 700");
     break;
-  case massaTotale > 900:
+  case massaTotale > 900 && massaTotale < 1000:
     console.log(" critical load: over 900");
     break;
   case massaTotale > 1000:
@@ -229,6 +239,11 @@ Usa uno più for loop per raggiungere il risultato
 
 Una volta fatto crea un conosle.log per controllare la proprietà length di "characters" prima e dopo l'operazione
 */
+
+for (i = 0; i < femaleCharacters.length; i++) {
+  characters.splice(characters.indexOf(femaleCharacters[i].name), 1);
+}
+console.log(characters);
 
 /* EXTRA ESERCIZIO 10
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
