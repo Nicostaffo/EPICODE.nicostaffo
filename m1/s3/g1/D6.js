@@ -181,4 +181,5 @@ REGOLE
         return newArr;
     }
     console.log(giveMeRandom(5));
+    console.log(giveMeRandom(8));
 } 
