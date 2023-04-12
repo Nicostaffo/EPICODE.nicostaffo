@@ -239,15 +239,17 @@ let movies = [
 /* ESERCIZIO 10
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
-function filmPiuVecchio(film) {
+function filmPiuVecchio(movies) {
   let oldest = movies[0];
-  for (let i = 1; i < film.length; i++) {
-    if (film[i].years < oldest.year) {
-      oldest = film[i];
+  for (let i = 1; i < movies.length; i++) {
+    if (movies[i].years < oldest.year) {
+      oldest = movies[i];
     }
   }
   return oldest
 }
+let oldest = filmPiuVecchio(movies);
+console.log(oldest);
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
