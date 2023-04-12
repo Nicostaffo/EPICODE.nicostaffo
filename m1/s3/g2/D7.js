@@ -100,7 +100,7 @@
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-function lunghezzaStringhe(array) {
+function lunghezzaStringhe() {
   let lunghezze = [];
   for (let i = 0; i < array.length; i++) {
     lunghezze.push(array[i].length);
@@ -108,7 +108,7 @@ function lunghezzaStringhe(array) {
   return lunghezze;
 }
 let array = ["EPICODE", "is", "great"];
-let lunghezze = lunghezzaStringhe(array);
+let lunghezze = lunghezzaStringhe();
 console.log(lunghezze); // output atteso: [7, 2, 5]
 
 /* ESERCIZIO 9
@@ -239,22 +239,22 @@ let movies = [
 /* ESERCIZIO 10
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
-function filmPiuVecchio(movies) {
-  let oldest = movies[0];
-  for (let i = 1; i < movies.length; i++) {
-    if (movies[i].years < oldest.year) {
-      oldest = movies[i];
+function filmPiuVecchio() {
+  let oldest = null;
+  for (let currentMovie of movies) {
+    if (oldest == null || oldest.Year > currentMovie.Year) {
+      oldest = currentMovie;
     }
   }
   return oldest
 }
-let oldest = filmPiuVecchio(movies);
-console.log(oldest);
+
+console.log(filmPiuVecchio());
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 {
-  function numFilm(movies) {
+  function numFilm() {
     return movies.length;
   }
   let totFilm = numFilm(movies);
@@ -267,6 +267,10 @@ console.log(oldest);
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+movies.filter(function (movie) {
+  return movie.Year >= 2000
+})
+
 
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
@@ -275,3 +279,9 @@ console.log(oldest);
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+function yearSum() {
+  return movies.reduce(function (p, c) {
+    return p + Number(c.Year)
+  }, 0)
+}
+console.log(yearSum())
