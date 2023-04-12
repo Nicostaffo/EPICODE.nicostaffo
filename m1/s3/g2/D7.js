@@ -114,6 +114,16 @@ console.log(lunghezze); // output atteso: [7, 2, 5]
 /* ESERCIZIO 9
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+function numeriDispari() {
+  let risultati = [];
+  for (let i = 1; i <= 99; i += 2) {
+    risultati.push(i);
+  }
+  return risultati;
+}
+
+let risultati = numeriDispari();
+console.log(risultati);
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 let movies = [
@@ -229,7 +239,15 @@ let movies = [
 /* ESERCIZIO 10
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
-
+function filmPiuVecchio(film) {
+  let oldest = movies[0];
+  for (let i = 1; i < film.length; i++) {
+    if (film[i].years < oldest.year) {
+      oldest = film[i];
+    }
+  }
+  return oldest
+}
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
