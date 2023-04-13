@@ -194,43 +194,114 @@
     */
 
     const generateTable = function () {
-      let tableArea = document.getElementById("tableArea");
-      let table = document.createElement("table");
-      let headerRow = table.insertRow(0);
-      let headerCell1 = headerRow.insertCell(0);
-      let headerCell2 = headerRow.insertCell(1);
-      let headerCell3 = headerRow.insertCell(2);
-      let headerCell4 = headerRow.insertCell(3);
-      headerCell1.textContent = "immagine";
-      headerCell2.textContent = "nome prodotto";
-      headerCell3.textContent = "quantità";
-      headerCell4.textContent = "prezzo";
-      for (var i = 1; i <= 5; i++) {
-        var row = table.insertRow(i);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
-        cell1.innerHTML =
-          "<img src='immagine" + i + ".jpg' alt='Immagine " + i + "'>";
-        cell2.textContent = "Prodotto " + i;
-        cell3.textContent = "Quantità " + i;
-        cell4.textContent = "Prezzo " + i;
+
+      let target = document.querySelector('#tableArea');
+
+      let tabella = document.createElement('table');
+      let thead = document.createElement('thead');
+      let tbody = document.createElement('tbody');
+      let primaTr = document.createElement('tr');
+
+      thead.append(primaTr);
+      tabella.append(thead, tbody);
+      target.append(tabella);
+
+      let colonne = ['immagine', ' nome prodotto', 'quantità', 'prezzo'];
+
+      for (let colonna of colonne) {
+        let th = document.createElement('th');
+        th.textContent = colonna;
+        primaTr.append(th);
       }
-      tableArea.appendChild(table);
-    };
+
+      let dati = [
+        {
+          immagine: 'urlimmagine',
+          nome_prodotto: 'lorem ipsum',
+          quantità: 1000,
+          prezzo: 18
+        },
+        {
+          immagine: 'urlimmagine',
+          nome_prodotto: 'lorem ipsum',
+          quantità: 100,
+          prezzo: 1
+        },
+        {
+          immagine: 'urlimmagine',
+          nome_prodotto: 'lorem ipsum',
+          quantità: 1,
+          prezzo: 187
+        },
+        {
+          immagine: 'urlimmagine',
+          nome_prodotto: 'lorem ipsum',
+          quantità: 1,
+          prezzo: 145
+        },
+        {
+          immagine: 'urlimmagine',
+          nome_prodotto: 'lorem ipsum',
+          quantità: 1000,
+          prezzo: 134
+        },
+      ]
+
+
+      for (let riga of dati) {
+        let tr = document.createElement('tr');
+
+        let immagine = document.createElement('td');
+        immagine.textContent = riga.immagine
+
+        let nome = document.createElement('td');
+        nome.textContent = riga.nome_prodotto
+
+        let quantità = document.createElement('td');
+        quantità.textContent = riga.quantità
+
+        let prezzo = document.createElement('td');
+        prezzo.textContent = riga.prezzo
+
+
+        immagine.addEventListener('click', function () {
+          console.log("hai cliccato l'immagine");
+        })
+
+        tr.append(immagine, nome, quantità, prezzo)
+        tbody.append(tr);
+      }
+    }
 
     generateTable();
-
 
     /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-    const addRow = function () {
+    const addRow = function (immagine, nomeProdotto, quantita, prezzo) {
+      let tabella = document.querySelector("table");
+      let nuovaRiga = document.createElement("tr");
+
+      let immagineRiga = document.createElement("td");
+      immagineRiga.textContent = immagine;
+
+      let nomeRiga = document.createElement("td");
+      nomeRiga.textContent = nomeProdotto;
+
+      let quantitaRiga = document.createElement("td");
+      quantitaRiga.textContent = quantita;
+
+      let prezzoRiga = document.createElement("td");
+      prezzoRiga.textContent = prezzo;
+
+      nuovaRiga.append(immagineRiga, nomeRiga, quantitaRiga, prezzoRiga);
+      tabella.append(nuovaRiga);
+    };
+
+    addRow("immagine", "Smartphone", "6", "306");
 
 
-    }
 
     /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
@@ -238,17 +309,25 @@
 
     const hideAllImages = function () {
 
-
     }
+
 
     /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
     const changeColorWithRandom = function () {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
 
+      let colore = `rgb(${r},${g},${b})`;
+      let cambiaColore = document.querySelector('#changeMyColor');
+      cambiaColore.style.color = colore
 
     }
+    let cambiaColore = document.querySelector('#changeMyColor');
+    cambiaColore.addEventListener('click', changeColorWithRandom)
 
     /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
