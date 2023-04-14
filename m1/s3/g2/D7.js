@@ -242,7 +242,7 @@ let movies = [
 function filmPiuVecchio() {
   let oldest = null;
   for (let currentMovie of movies) {
-    if (oldest == null || oldest.Year > currentMovie.Year) {
+    if (oldest == null || oldest.Year < currentMovie.Year) {
       oldest = currentMovie;
     }
   }
