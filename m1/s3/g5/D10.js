@@ -276,21 +276,17 @@ console.log(howManyDays(new Date(2020, 11, 10)));
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
-function isTodayMyBirthday(date) {
-  let today = new Date();
-  let year = today.getFullYear();
-  let month = today.getMonth();
-  let day = today.getDate();
-  let giornoComple = date.getDate();
-  let meseComple = date.getMonth();
-  let annoComple = date.getFullYear();
-  if (year == annoComple && month == meseComple && day == giornoComple) {
+function isTodayMyBirthday() {
+  let giornoComple = new Date();
+  if (giornoComple.getMonth() == 4 && giornoComple.getDate() == 21) {
     return true;
+
   } else {
     return false;
+
   }
 }
-console.log(isTodayMyBirthday(new Date(2023, 3, 14)));
+console.log(isTodayMyBirthday());
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
@@ -481,6 +477,13 @@ function addClass() {
 
 */
 
+function mezzAlbero(height) {
+  for (let i = 1; i <= height; i++) {
+    console.log("*".repeat(i));
+  }
+}
+console.log(mezzAlbero(3));
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -493,6 +496,12 @@ function addClass() {
 
 */
 
+function fullAlbero(h) {
+  for (let i = 1; i <= h; i++) {
+    console.log(" ".repeat(h - 1), "*".repeat(i + i - 1));
+  }
+}
+fullAlbero(5);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
