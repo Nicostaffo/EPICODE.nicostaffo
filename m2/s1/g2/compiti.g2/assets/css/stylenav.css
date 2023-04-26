@@ -1,0 +1,39 @@
+nav {
+    background-color: #fef7e2;
+    padding: 20px 20px;
+    border-radius: 55px;
+}
+
+#logoShop {
+    width: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40px;
+    align-items: center;
+
+}
+
+ul li button {
+    border: none;
+    background-color: #f8d878;
+    color: rgb(163, 42, 42);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.centralNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+span {
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}

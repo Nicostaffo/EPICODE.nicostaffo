@@ -1,0 +1,47 @@
+.container {
+    width: 330px;
+    background-color: #fef7e2;
+    border-radius: 90px;
+}
+
+.honey {
+    border-radius: 90px 90px 0px 0px;
+    background-image: url(../imgs/honey.jpg);
+    height: 330px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(163, 42, 42);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px 20px;
+}
+
+.dueP p {
+    margin: 0;
+}
+
+.dueP p:first-child {
+    font-weight: bold;
+}
+
+.contButt {
+    display: flex;
+    padding-top: 8px;
+    padding-bottom: 15px;
+    justify-content: center;
+}
+
+button {
+    padding: 8px 45px;
+    border-radius: 15px;
+    background-color: #f8d878;
+    color: rgb(163, 42, 42);
+    border: none;
+}
