@@ -31,30 +31,30 @@ main {
 }
 
 #first-word {
-    animation: wordAnimation 6s ease-in 1s infinite both;
+    animation: wordAnimation 6s ease-in 0s infinite;
 }
 
 #second-word {
-    animation: wordAnimation 6s ease-in 3s infinite both;
+    animation: wordAnimation 6s ease-in 2s infinite;
 }
 
 #third-word {
-    animation: wordAnimation 6s ease-in 5s infinite both;
+    animation: wordAnimation 6s ease-in 4s infinite;
 }
 
 @keyframes wordAnimation {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(-15px);
         opacity: 0;
     }
 
-    50% {
-        transform: translateY(0);
+    30% {
+        transform: translateY(0px);
         opacity: 1;
     }
 
+    60%,
     100% {
-        transform: translateY(20px);
+        transform: translateY(15px);
         opacity: 0;
     }
-}
