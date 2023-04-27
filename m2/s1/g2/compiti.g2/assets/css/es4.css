@@ -12,7 +12,7 @@ img {
 nav {
     background-color: #fef7e2;
     padding: 20px 20px;
-    border-radius: 55px;
+
 }
 
 #logoShop {
@@ -40,7 +40,8 @@ ul li button {
     display: flex;
     flex-direction: row;
     align-items: center;
-
+    padding-top: 18px;
+    padding-bottom: 18px;
 }
 
 span {
@@ -58,7 +59,7 @@ span {
 .honey {
     border-radius: 90px 90px 0px 0px;
     background-image: url(../imgs/honey.jpg);
-    height: 330px;
+    height: 300px;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -97,8 +98,24 @@ button {
     border: none;
 }
 
+body {
+    padding: 0px 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-@media screen and (min-width:576px) {
+h3,
+h2 {
+    font-size: 25px;
+
+}
+
+@media screen and (min-width: 320px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width:550px) {
     .mainContainer {
         display: flex;
         justify-content: center;
@@ -107,6 +124,7 @@ button {
     }
 
     .container {
-        margin: 10px;
+
+        margin: 20px;
     }
 }
