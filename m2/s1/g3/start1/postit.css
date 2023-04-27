@@ -59,3 +59,47 @@ h2 {
     z-index: 1;
     transform: scale(1.3);
 }
+
+.n1 {
+    animation: animateStart 2s linear 1s backwards;
+}
+
+.n2 {
+    animation: animateStart 2s linear 3s backwards;
+}
+
+.n3 {
+    animation: animateStart 2s linear 5s backwards;
+}
+
+.n4 {
+    animation: animateStart 2s linear 8s backwards;
+}
+
+.n5 {
+    animation: animateStart 2s linear 10s backwards;
+}
+
+.n6 {
+    animation: animateStart 2s linear 12s backwards;
+}
+
+.n7 {
+    animation: animateStart 2s linear 14s backwards;
+}
+
+.n8 {
+    animation: animateStart 2s linear 16s backwards;
+}
+
+@keyframes animateStart {
+    0% {
+        scale: 3;
+        opacity: 0;
+    }
+
+    100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
