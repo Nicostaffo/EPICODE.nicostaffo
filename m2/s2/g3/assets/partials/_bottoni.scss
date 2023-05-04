@@ -1,0 +1,30 @@
+// @each $button in $button-colors {
+//     .color-#{$button} {
+//         background-color: $button-colors;
+//     }
+// }
+
+.fir-color {
+    background-color: $first-button-color;
+}
+
+.sec-color {
+    background-color: $second-button-color;
+}
+
+.thi-color {
+    background-color: $third-button-color;
+
+}
+
+button.fir-color:hover {
+    scale: (1.2);
+}
+
+button.sec-color:hover {
+    scale: (1.2);
+}
+
+button.thi-color:hover {
+    scale: (1.2);
+}
