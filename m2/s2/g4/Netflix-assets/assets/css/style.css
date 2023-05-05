@@ -6,10 +6,6 @@ body {
   border: 0;
 }
 
-.container-fluid {
-  padding: 0;
-}
-
 .backG {
   background-color: #141414;
 }
@@ -18,16 +14,16 @@ header {
   color: white;
 }
 
-.container-fluid img {
-  width: 100px;
-}
-
 ul li {
   margin-right: 8px;
 }
 
 #secondSideNav li a img {
   width: 30px;
+}
+
+#logo {
+  width: 100px;
 }
 
 .style-dropdown-genres {
@@ -40,6 +36,6 @@ ul li {
   left: -100px;
 }
 
-.carousel-item img {
-  width: 150px !important;
+.carousel-indicators {
+  bottom: -32px;
 }/*# sourceMappingURL=style.css.map */
