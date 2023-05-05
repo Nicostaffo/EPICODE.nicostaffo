@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+  margin: 0 1%;
+  padding: 0;
+  border: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.backG {
+  background-color: #141414;
+}
+
+header {
+  color: white;
+}
+
+.container-fluid img {
+  width: 100px;
+}
+
+ul li {
+  margin-right: 8px;
+}
+
+#secondSideNav li a img {
+  width: 30px;
+}
+
+.style-dropdown-genres {
+  color: white;
+  border: 1.5px solid white;
+}
+
+#abs {
+  position: absolute;
+  left: -100px;
+}
+
+.carousel-item img {
+  width: 150px !important;
+}/*# sourceMappingURL=style.css.map */
