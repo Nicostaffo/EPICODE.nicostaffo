@@ -2,8 +2,6 @@ html,
 body {
   height: 100%;
   margin: 0;
-  padding: 0;
-  border: 0;
 }
 
 header,
@@ -51,6 +49,25 @@ ul li {
   left: -100px;
 }
 
+header .dropdown ul {
+  background-color: gray;
+}
+
 .carousel-indicators {
   bottom: -32px;
+}
+
+main .col {
+  padding: 1px;
+}
+main .col img:hover {
+  scale: 1.2;
+}
+
+footer .row a {
+  text-decoration: none;
+  color: gray;
+}
+footer .row a:hover {
+  color: white !important;
 }/*# sourceMappingURL=style.css.map */

@@ -1,3 +1,15 @@
 .carousel-indicators {
     bottom: -32px;
 }
+
+main {
+    .col {
+        padding: 1px;
+
+        img {
+            &:hover {
+                scale: (1.2);
+            }
+        }
+    }
+}
