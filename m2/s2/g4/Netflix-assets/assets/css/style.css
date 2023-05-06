@@ -31,6 +31,9 @@ ul li {
   margin-right: 8px;
 }
 
+#secondSideNav {
+  flex-direction: row;
+}
 #secondSideNav li a img {
   width: 30px;
 }
@@ -66,20 +69,25 @@ main .carousel-control-prev {
 main .carousel-inner {
   padding: 3rem;
 }
-main .carousel-inner .col {
+main .carousel-inner .row {
+  --bs-gutter-x: 0;
+}
+main .carousel-inner .row .col {
   padding: 1px;
 }
-main .carousel-inner .col img:hover {
+main .carousel-inner .row img:hover {
   scale: 1.2;
 }
 
 footer .row a,
-footer .row p {
+footer .row p,
+footer .row svg {
   text-decoration: none;
   color: gray;
 }
 footer .row a:hover,
-footer .row p:hover {
+footer .row p:hover,
+footer .row svg:hover {
   color: white !important;
 }
 
@@ -99,4 +107,8 @@ footer .row p:hover {
 .col .btn:hover {
   background-color: white;
   color: black;
+}
+
+.container a {
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

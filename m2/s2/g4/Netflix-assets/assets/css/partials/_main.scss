@@ -15,8 +15,14 @@ main {
     .carousel-inner {
         padding: 3rem;
 
-        .col {
-            padding: 1px;
+        .row {
+            --bs-gutter-x: 0;
+
+            .col {
+                padding: 1px;
+
+
+            }
 
             img {
                 &:hover {
@@ -24,7 +30,6 @@ main {
 
                 }
             }
-
         }
     }
 }
