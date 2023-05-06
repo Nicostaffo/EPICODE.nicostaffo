@@ -1,5 +1,32 @@
-.container {
+.col-8 {
+    .container {
+        padding: 0;
+
+    }
+
     a {
         text-decoration: none;
     }
+
+    img {
+        width: 65px;
+        border: 1px solid black;
+        border-radius: 2px;
+        background-color: rgb(218, 214, 214);
+    }
+
+    p {
+        #img2 {
+            width: 25px;
+            margin-right: 3px;
+        }
+    }
+}
+
+.row>* {
+    padding-right: 0;
+}
+
+button {
+    border: none;
 }
