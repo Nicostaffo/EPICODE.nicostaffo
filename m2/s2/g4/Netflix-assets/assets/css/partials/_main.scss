@@ -1,15 +1,30 @@
 .carousel-indicators {
-    bottom: -32px;
+    bottom: 2px;
 }
 
 main {
-    .col {
-        padding: 1px;
+    .carousel-control-next {
+        right: -95px;
+    }
 
-        img {
-            &:hover {
-                scale: (1.2);
+
+    .carousel-control-prev {
+        left: -95px;
+    }
+
+    .carousel-inner {
+        padding: 3rem;
+
+        .col {
+            padding: 1px;
+
+            img {
+                &:hover {
+                    scale: (1.2);
+
+                }
             }
+
         }
     }
 }

@@ -1,0 +1,21 @@
+.col {
+    .btn {
+        --bs-btn-border-radius: none;
+        width: 100%;
+
+        a,
+        h6 {
+            color: white;
+            margin: 0;
+
+            &:hover {
+                color: black;
+            }
+        }
+
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}

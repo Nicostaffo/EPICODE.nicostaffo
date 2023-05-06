@@ -54,20 +54,49 @@ header .dropdown ul {
 }
 
 .carousel-indicators {
-  bottom: -32px;
+  bottom: 2px;
 }
 
-main .col {
+main .carousel-control-next {
+  right: -95px;
+}
+main .carousel-control-prev {
+  left: -95px;
+}
+main .carousel-inner {
+  padding: 3rem;
+}
+main .carousel-inner .col {
   padding: 1px;
 }
-main .col img:hover {
+main .carousel-inner .col img:hover {
   scale: 1.2;
 }
 
-footer .row a {
+footer .row a,
+footer .row p {
   text-decoration: none;
   color: gray;
 }
-footer .row a:hover {
+footer .row a:hover,
+footer .row p:hover {
   color: white !important;
+}
+
+.col .btn {
+  --bs-btn-border-radius: none;
+  width: 100%;
+}
+.col .btn a,
+.col .btn h6 {
+  color: white;
+  margin: 0;
+}
+.col .btn a:hover,
+.col .btn h6:hover {
+  color: black;
+}
+.col .btn:hover {
+  background-color: white;
+  color: black;
 }/*# sourceMappingURL=style.css.map */
