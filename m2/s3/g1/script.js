@@ -42,7 +42,11 @@ class Pet {
     }
 
     static confrontOwner(c, d) {
-        return c.ownerName === d.ownerName
+        if (c.ownerName === d.ownerName) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
