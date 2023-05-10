@@ -1,6 +1,7 @@
 let saveButton = document.getElementById('save-button');
 let deleteButton = document.getElementById('delete-button');
 let inputArea = document.querySelector('input');
+let newUl = document.querySelector('ul');
 
 saveButton.addEventListener('click', function (e) {
     e.preventDefault();
@@ -24,6 +25,8 @@ setInterval(() => {
 
 
 }, 1000)
+
+
 
 
 
