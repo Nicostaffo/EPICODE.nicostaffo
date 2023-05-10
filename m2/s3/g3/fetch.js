@@ -41,6 +41,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
                     let newLi = document.createElement('li');
                     newLi.innerHTML = `<p>${book.title}</p> <p>${book.price}</p>`;
                     car.appendChild(newLi);
+                    localStorage.setItem('book', newLi.stringify())
                 });
             });
         });
