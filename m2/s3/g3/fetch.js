@@ -12,7 +12,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
         list.forEach((book) => {
             let col = document.createElement('div');
             col.classList.add('col-sm-10', 'col-md-5', 'col-lg-4');
-            col.innerHTML = `<div class="card">
+            col.innerHTML = `<div class="card" style="width: 18rem;">
             <img id="bookImg" src=${book.img} class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">${book.title}</h5>
@@ -36,7 +36,7 @@ fetch('https://striveschool-api.herokuapp.com/books')
             let car = document.querySelector('ul')
             let btnAddToCart = col.querySelectorAll('.btnAddToCart');
             btnAddToCart.forEach((b) => {
-                b.addEventListener('click', () => {
+                b.addEventListener('click', function () {
                     let card = this.closest('.card');
                     let newLi = document.createElement('li');
                     newLi.innerHTML = `<p>${book.title}</p> <p>${book.price}</p>`;
