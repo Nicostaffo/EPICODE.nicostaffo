@@ -18,8 +18,7 @@ const getProducts = function () {
             }
         })
         .then((data) => {
-            console.log('PRODOTTI IN DB', data)
-            // inseriamo della logica per creare le colonne a partire dall'array data
+
             data.forEach((product) => {
                 let colTemplate = `
          <div class="col-12 col-md-4">
@@ -30,18 +29,16 @@ const getProducts = function () {
                <p class="card-text">
                ${product.description}
                </p>
-               <p> ${product.brand}€</p>
+               <p> ${product.brand}</p>
                <p> ${product.price}€</p>
                <a href="./backoffice.html?productId=${product._id}" class="btn btn-primary">MODIFICA</a>
+               <a href="./details.html?productId=${product._id}" class="btn btn-secondary">Scopri di più</a>
              </div>
            </div>
          </div>
          `
-                // sto passando all'indirizzo ./backoffice.html UN PARAMETRO
-                // questo parametro è l'_id della risorsa che intenderò modificare!
-
-                let rowReference = document.getElementById('products-container') // <div class="row"></div>
-                rowReference.innerHTML += colTemplate // aggiungo colTemplate all'attuale contenuto di rowReference
+                let rowReference = document.getElementById('products-container')
+                rowReference.innerHTML += colTemplate
             })
         })
         .catch((error) => {
@@ -50,8 +47,6 @@ const getProducts = function () {
 }
 
 window.onload = () => {
-    // all'avvio di index.html lancio getEvents()
-
     getProducts()
 }
 

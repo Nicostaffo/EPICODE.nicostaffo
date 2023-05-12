@@ -56,7 +56,7 @@ fetch(FETCH_URL + productId, {
             'DATI DEL SINGOLO PODOTTO RECUPERATO TRAMITE GET SINGOLA',
             product
         )
-        // ripopoliamo il form, finalmente
+
         document.getElementById('name').value = product.name
         document.getElementById('description').value = product.description
         document.getElementById('image').value = product.imageUrl
