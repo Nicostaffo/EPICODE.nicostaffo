@@ -22,7 +22,7 @@ const getProducts = function () {
             data.forEach((product) => {
                 let colTemplate = `
          <div class="col-12 col-md-4">
-           <div class="card">
+           <div class="card my-3">
            <img src=${product.imageUrl} class='card-img-top' alt='prod.img'/>
              <div class="card-body">
                <h5 class="card-title">${product.name}</h5>

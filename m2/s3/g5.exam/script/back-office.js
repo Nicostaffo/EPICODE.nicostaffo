@@ -1,4 +1,4 @@
-const FETCH_URL = "https://striveschool-api.herokuapp.com/api/product/"
+const PRODUCTS_URL = "https://striveschool-api.herokuapp.com/api/product/"
 
 let addressBarContent = new URLSearchParams(window.location.search)
 
@@ -16,29 +16,34 @@ if (productId) {
     let deleteButton = document.getElementById('delete-button')
     deleteButton.classList.remove('d-none')
     deleteButton.addEventListener('click', () => {
-        fetch(FETCH_URL + productId, {
-            method: 'DELETE',
-            headers: {
-                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVkZmMxMzg4Zjc0MDAwMTQyODc0NGYiLCJpYXQiOjE2ODM4ODA5NzksImV4cCI6MTY4NTA5MDU3OX0.SrMxqSS7dM7bvVAUEadu3ZL0DownFgKv2V6OSZV9mOQ"
-            }
-
-        })
-            .then((res) => {
-                if (res.ok) {
-                    alert('eliminazione completata con successo')
-                    location.assign('./homepage.html')
-                } else {
-                    throw new Error("Problema nell'eliminazione del prodotto")
+        const confirmed = confirm(
+            "Procedere con l'eliminazione definitiva?"
+        );
+        if (confirmed) {
+            fetch(PRODUCTS_URL + productId, {
+                method: 'DELETE',
+                headers: {
+                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVkZmMxMzg4Zjc0MDAwMTQyODc0NGYiLCJpYXQiOjE2ODM4ODA5NzksImV4cCI6MTY4NTA5MDU3OX0.SrMxqSS7dM7bvVAUEadu3ZL0DownFgKv2V6OSZV9mOQ"
                 }
+
             })
-            .catch((err) => {
-                console.log(err)
-            })
+                .then((res) => {
+                    if (res.ok) {
+                        alert('eliminazione completata con successo')
+                        location.assign('./homepage.html')
+                    } else {
+                        throw new Error("Problema nell'eliminazione del prodotto")
+                    }
+                })
+                .catch((err) => {
+                    console.log(err)
+                })
+        }
     })
 }
 
 
-fetch(FETCH_URL + productId, {
+fetch(PRODUCTS_URL + productId, {
     headers: {
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDVkZmMxMzg4Zjc0MDAwMTQyODc0NGYiLCJpYXQiOjE2ODM4ODA5NzksImV4cCI6MTY4NTA5MDU3OX0.SrMxqSS7dM7bvVAUEadu3ZL0DownFgKv2V6OSZV9mOQ"
     },
@@ -90,7 +95,7 @@ productForm.addEventListener('submit', function (e) {
     }
     console.log('evento pronto da inviare alle API', newProduct)
 
-    fetch(productId ? FETCH_URL + productId : FETCH_URL, {
+    fetch(productId ? PRODUCTS_URL + productId : PRODUCTS_URL, {
 
         method: productId ? 'PUT' : 'POST',
         body: JSON.stringify(newProduct),
@@ -115,4 +120,18 @@ productForm.addEventListener('submit', function (e) {
         .catch((err) => {
             console.log(err)
         })
+})
+
+
+let resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', () => {
+    const confirmed = confirm("Vuoi procedere con il reset?");
+
+    if (confirmed) {
+        document.getElementById("name").value = "";
+        document.getElementById("description").value = "";
+        document.getElementById("image").value = "";
+        document.getElementById("price").value = "";
+        document.getElementById("brand").value = "";
+    }
 })
