@@ -105,7 +105,7 @@ productForm.addEventListener('submit', function (e) {
             if (res.ok) {
 
                 alert(productId ? 'PRODOTTO MODIFICATO!' : 'PRODOTTO CREATO!')
-                location.assign('/backoffice.html')
+                location.assign('/homepage.html')
             } else {
 
                 alert('ERRORE NEL SALVATAGGIO')

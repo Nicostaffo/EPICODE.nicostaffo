@@ -1,10 +1,5 @@
 const PRODUCT_URL = "https://striveschool-api.herokuapp.com/api/product/"
 
-
-
-
-
-
 const getProducts = function () {
 
     fetch(PRODUCT_URL, {
