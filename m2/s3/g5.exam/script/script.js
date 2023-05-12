@@ -24,11 +24,11 @@ const getProducts = function () {
                 let colTemplate = `
          <div class="col-12 col-md-4">
            <div class="card">
+           <img src=${product.imageUrl} class='card-img-top' alt='prod.img'/>
              <div class="card-body">
                <h5 class="card-title">${product.name}</h5>
-               <p class="card-text">${product.imageUrl}</p>
                <p class="card-text">
-                 ${product.description}
+               ${product.description}
                </p>
                <p> ${product.brand}€</p>
                <p> ${product.price}€</p>

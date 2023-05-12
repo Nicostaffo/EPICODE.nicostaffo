@@ -4,12 +4,12 @@ let addressBarContent = new URLSearchParams(window.location.search)
 
 let productId = addressBarContent.get('productId')
 
-console.log('EVENTID', productId)
+console.log('PRODUCTID', productId)
 
 if (productId) {
 
     document.getElementsByTagName('h2')[0].innerText =
-        'Backoffice page - Modifica evento'
+        'Backoffice page - Modifica ricambio'
 
     document.getElementById('save-button').innerText = 'MODIFICA EVENTO'
 
@@ -105,7 +105,7 @@ productForm.addEventListener('submit', function (e) {
             if (res.ok) {
 
                 alert(productId ? 'PRODOTTO MODIFICATO!' : 'PRODOTTO CREATO!')
-                location.assign('/homepage.html')
+                location.assign('./homepage.html')
             } else {
 
                 alert('ERRORE NEL SALVATAGGIO')
