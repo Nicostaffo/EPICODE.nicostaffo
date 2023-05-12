@@ -1,41 +1,109 @@
-let apiKey = 'KTKjx0dwDeyoMDIgiLOsDSW1gwulInSop4toWR9vRVPnmDxJ9TusQHoh';
+const PEXELS_URL = 'https://api.pexels.com/v1/search?query='
 
-const PIXELS_URL = 'https://api.pexels.com/v1/search?query='
-
-const renderImg = function (images) {
-    let row = document.querySelector('.album .container .row');
-    row.innerHTML = '';
-    images.forEach((images) => {
-        let col = ``
-    });
+const fillImageInModal = function (context) {
+  let imgIntoModal = document.querySelector('.modal img')
+  imgIntoModal.src =
+    context.parentElement.parentElement.parentElement.parentElement.querySelector(
+      'img'
+    ).src
 }
 
-const nuovaImg = function (query) {
-    fetch(+ query, {
-        headers: {
-            authorization: apiKey,
-        },
+const hideColumn = function (context) {
+  console.log('context', context)
+  let rightColToDelete = context.closest('.col-md-4')
+  rightColToDelete.remove()
+}
+
+const renderCards = function (photos) {
+  // svuoto la row
+  let row = document.querySelector('.album .container .row')
+  row.innerHTML = ''
+  photos.forEach((photo) => {
+    let colTemplate = `
+    <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+        <a href="./details.html?photoId=${photo.id}">
+            <img src=${photo.src.small}} style="width: 100%" />
+        </a>
+            <div class="card-body">
+            <a href="./details.html?photoId=${photo.id}">
+                <h5 class="card-title">Lorem Ipsum</h5>
+            </a>
+                <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+                </p>
+                <div
+                class="d-flex justify-content-between align-items-center"
+                >
+                <div class="btn-group">
+                    <button
+                        type="button"
+                        class="btn btn-sm btn-outline-secondary"
+                        data-toggle="modal"
+                        data-target="#exampleModal"
+                        onclick="fillImageInModal(this)"
+                    >
+                        View
+                    </button>
+                    <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                    onclick="hideColumn(this)"
+                    >
+                    Hide
+                    </button>
+                </div>
+                <small class="text-muted">${photo.id}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
+    row.innerHTML += colTemplate
+  })
+}
+
+const getImages = function (query) {
+  fetch(PEXELS_URL + query, {
+    headers: {
+      authorization: 'TXAl4tsq0AH939vI13rKvpyMo7xSgfkSwtTUiEnLKjjvEI0zqABAVoL5',
+    },
+  })
+    .then((res) => {
+      if (res.ok) {
+        return res.json()
+      } else {
+        throw new Error('Error getting the images')
+      }
     })
-        .then((res) => {
-            if (res.ok) {
-                return res.json()
-            } else {
-                return new Error("error")
-            }
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+    .then((data) => {
+      console.log(data)
+      // rimpiazzo il DOM
+      renderCards(data.photos)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
 }
-//non ho capito niente 
 
 window.onload = function () {
-    let loadImg = document.getElementById('loadImg');
-    loadImg.addEventListener('click', function () {
-        nuovaImg('lakes')
-    })
-    let loadSecImg = document.getElementById('loadSecImg');
-    loadSecImg.addEventListener('click', function () {
-        nuovaImg('mountains')
-    })
+  let primaryButton = document.querySelector('.btn-primary')
+  primaryButton.addEventListener('click', () => {
+    getImages('mountains')
+  })
+
+  let secondaryButton = document.querySelector('.btn-secondary')
+  secondaryButton.addEventListener('click', () => {
+    getImages('sunsets')
+  })
+
+  let customInputField = document.querySelector('.input-group .form-control')
+  let customSearchButton = document.querySelector(
+    '.input-group .btn-outline-secondary'
+  )
+  customSearchButton.addEventListener('click', () => {
+    getImages(customInputField.value)
+  })
 }
