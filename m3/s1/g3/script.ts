@@ -5,12 +5,12 @@ abstract class WorkerList {
     tasseirpef: number
 
     constructor(coddred: number, tasseirpef: number, tasseinps: number) {
-        this.coddred = this.getUtileTasse();
         this.redditoannuolordo = this.getRedditoAnnuoNetto();
+        // this.coddred = this.getUtileTasse();
         this.tasseinps = this.getTasseInps();
         this.tasseirpef = this.getTasseIrpef();
     }
-    abstract getUtileTasse(): number
+    // abstract getUtileTasse(): number
     abstract getRedditoAnnuoNetto(): number
     abstract getTasseInps(): number
     abstract getTasseIrpef(): number
@@ -23,9 +23,9 @@ class Worker_1 extends WorkerList {
         this.redditoannuolordo = redditoannuolordo;
     }
 
-    getUtileTasse(): number {
-        throw new Error("Not implemented");
-    }
+    // getUtileTasse(): number {
+
+    // }
 
     getRedditoAnnuoNetto(): number {
         const redditoAnnuoNetto = this.redditoannuolordo - (this.getTasseInps() + this.getTasseIrpef())
@@ -63,4 +63,6 @@ class Worker_1 extends WorkerList {
     }
 }
 
-let pippoBaudo = new Worker_1()
+let pippoBaudo = new Worker_1(0, 15000, 0, 0)
+console.log(pippoBaudo);
+

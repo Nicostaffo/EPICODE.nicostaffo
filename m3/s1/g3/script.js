@@ -15,8 +15,8 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var WorkerList = /** @class */ (function () {
     function WorkerList(coddred, tasseirpef, tasseinps) {
-        this.coddred = this.getUtileTasse();
         this.redditoannuolordo = this.getRedditoAnnuoNetto();
+        // this.coddred = this.getUtileTasse();
         this.tasseinps = this.getTasseInps();
         this.tasseirpef = this.getTasseIrpef();
     }
@@ -29,9 +29,8 @@ var Worker_1 = /** @class */ (function (_super) {
         _this.redditoannuolordo = redditoannuolordo;
         return _this;
     }
-    Worker_1.prototype.getUtileTasse = function () {
-        throw new Error("Not implemented");
-    };
+    // getUtileTasse(): number {
+    // }
     Worker_1.prototype.getRedditoAnnuoNetto = function () {
         var redditoAnnuoNetto = this.redditoannuolordo - (this.getTasseInps() + this.getTasseIrpef());
         return redditoAnnuoNetto;
@@ -65,4 +64,5 @@ var Worker_1 = /** @class */ (function (_super) {
     };
     return Worker_1;
 }(WorkerList));
-var pippoBaudo = new Worker_1();
+var pippoBaudo = new Worker_1(0, 15000, 0, 0);
+console.log(pippoBaudo);
