@@ -94,6 +94,7 @@ thirdUser.getNumeroChiamate();
 console.log(thirdUser);
 thirdUser.getNumeroChiamate();
 thirdUser.filtraChiamatePerDataOra();
+console.log(thirdUser);
 
 // ho provato a salvare la costante del tempo nel local storge ma non capisco perche non vada
 // interface UserService {
