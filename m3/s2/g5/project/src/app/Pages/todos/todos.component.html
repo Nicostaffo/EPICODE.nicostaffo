@@ -2,6 +2,16 @@
 <div>
     <input type="text"><button>+</button>
 </div>
-<ul>
+<div *ngFor="let data of myArr">
+    <div *ngIf="data.completed==false">
+        <div>
+            <p>{{data.id}}</p>
+            <p>{{data.title}}</p>
+        </div>
+        <div>
+            <button>Modifica</button>
+            <button (click)="removeToDo(data.id)">Delete</button>
+        </div>
 
-</ul>
+    </div><!-- fine nfIf -->
+</div>
