@@ -27,4 +27,15 @@ export class ServiceService {
       method: 'DELETE',//indico che voglio eliminare
     }).then(response => response.json());
   }
+  changeStatus(id: number) {
+    const thisUrl = `${this.myFetch}/${id}`;
+    const data = { completed: true };
+    return fetch(thisUrl, {
+      method: 'PATCH',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    }).then((res) => res.json);
+  }
 }
