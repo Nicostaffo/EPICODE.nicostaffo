@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col">
+            <form>
+                <input type="text" class="form-control" required placeholder="Nome" [(ngModel)]="hero.name" name="nome">
+                <input type="text" class="form-control" required placeholder="Alter ego" [(ngModel)]="hero.alterEgo"
+                    name="alter ego">
+                <input type="text" class="form-control" required placeholder="Power" [(ngModel)]="hero.power"
+                    name="power">
+                <input type="text" class="form-control" placeholder="Enemy" [(ngModel)]="hero.enemy" name="Enemy">
+                <input type="text" class="form-control" required placeholder="Planet" [(ngModel)]="hero.Planet"
+                    name="Planet">
+                <input type="text" class="form-control" placeholder="Weakness" [(ngModel)]="hero.weakness"
+                    name="weakness">
+                <button (click)="aggiungiValoriInput()" class="btn btn-primary">Crea</button>
+            </form>
+            <h3>Lista eroi</h3>
+            <ul>
+                <li *ngFor="let valore of valoriInput">{{ valore }}</li>
+            </ul>
+
+        </div>
+
+
+        <div class="col-3"></div>
+    </div>
+</div>
