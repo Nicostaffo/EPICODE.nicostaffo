@@ -1,3 +1,18 @@
 {
-    "users": []
+  "users": [
+    {
+      "email": "staffolani@outlook.com",
+      "password": "$2a$10$rUMealt4vLRVM6sC8hrzJegmjr754ZSLn.s66NR0wcdvgF7HGPYDq",
+      "name": "nico",
+      "surname": "staffo",
+      "id": 1
+    },
+    {
+      "email": "alessio@lillo.com",
+      "password": "$2a$10$O/bmfffzYRTYKKLWHiHCZekO6CxbH1p9iS6lsYl5Jk/.7QTEWtI9a",
+      "name": "ale",
+      "surname": "bubi",
+      "id": 2
+    }
+  ]
 }
