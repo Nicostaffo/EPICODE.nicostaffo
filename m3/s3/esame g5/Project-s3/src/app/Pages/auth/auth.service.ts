@@ -29,7 +29,7 @@ export class AuthService {
     private http: HttpClient,
     private router: Router
   ) {
-
+    this.restoreUser()
   }
 
   login(data: LogInData) {
@@ -62,7 +62,7 @@ export class AuthService {
   logout() {
     this.authSubject.next(null);
     localStorage.removeItem('user');
-    this.router.navigate(['/log-in'])
+    this.router.navigate(['/auth', 'log-in'])
     if (this.authLogoutTimer) {
       clearTimeout(this.authLogoutTimer)
     }

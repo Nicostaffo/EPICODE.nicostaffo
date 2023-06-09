@@ -1,0 +1,16 @@
+header {
+  background-color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  border: 2px solid lightgrey;
+  border-radius: 5px;
+}
+header ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+header ul a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=header.component.css.map */

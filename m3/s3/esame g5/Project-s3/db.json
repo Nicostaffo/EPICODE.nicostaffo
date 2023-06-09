@@ -13,6 +13,20 @@
       "name": "ale",
       "surname": "bubi",
       "id": 2
+    },
+    {
+      "email": "casa@liimo.com",
+      "password": "$2a$10$z4BDdKEcCowXq8Koi9VgnuLJnRI/ftQlu9XH45TeM0mp0zpTse5te",
+      "name": "lalla",
+      "surname": "verdi",
+      "id": 3
+    },
+    {
+      "email": "andreanonsifida@chepalle.com",
+      "password": "$2a$10$X9wCkEN5A5nJut69T6uB6uYUT/pJUdq7G/BEK6YzuKg8BspkhBrPq",
+      "name": "ciao",
+      "surname": "bella",
+      "id": 4
     }
   ]
 }
