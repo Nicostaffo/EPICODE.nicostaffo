@@ -33,7 +33,7 @@ export class AuthService {
   }
 
   login(data: LogInData) {
-    return this.http.post<AccessData>(this.apiUrl + '/log-in', data)
+    return this.http.post<AccessData>(this.apiUrl + '/login', data)
       .pipe(tap(data => {
 
         this.authSubject.next(data);
