@@ -6,8 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+  postArray:[]=[]
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    
   }
 
 }
